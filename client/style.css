@@ -1,0 +1,156 @@
+/* jakeIRC styles */
+
+body {
+	width: 100%;
+	margin: 5%;
+
+	min-width: 600px;
+
+	text-align: center;
+
+	overflow: hidden;
+    overflow-y: auto;
+}
+
+h1, h2, h3, h4, p {
+	color: #222222;
+}
+
+.row {
+	width: 90%;
+	text-align: left;
+}
+
+.category{
+	height: 45px;
+	border-bottom-right-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+}
+
+.chat-window, .user-list, .channel-list, 
+.input-field, .connect-field, .login-field, 
+.help-field, .nav-bar, .category {
+	background: #F8F8F8;
+}
+
+.chat-window, .user-list, 
+.channel-list, .category {
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+
+.chat-window {
+	border-radius: 0px !important;
+	font-size: 120%;
+	border-top: 0px !important;
+}
+
+.user-list {
+	border-top-right-radius: 0px !important;
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+	
+	border-left: 0px !important;
+	border-top: 0px !important;
+}
+
+.channel-list {
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+	
+	border-right: 0px !important;
+	border-top: 0px !important;
+}
+
+.chat-window, .user-list, .channel-list {
+	height: 330px;
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	overflow: hidden;
+    overflow-y: auto;
+}
+
+.input-field {
+	margin-top: 10px;
+	height: 60px;
+
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+
+.login-field h2,
+.connect-field h2 {
+	margin-bottom: 20px;
+}
+
+.login-field button, 
+.connect-field button {
+	margin-bottom: 20px;
+}
+
+.connect-field, .login-field {
+	border: 1px solid #000;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.input-field button,
+.connect-field button,
+.login-field button {
+	margin-top: 10px;
+}
+
+.input-field h4 {
+	margin-top: 15px;
+}
+
+.help-field {
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+
+.help-field h1 {
+	margin-bottom: 20px;
+}
+
+.help-field p {
+	margin-bottom: 10px;
+}
+
+.nav-bar {
+	height: 50px;
+	margin-bottom: 10px;
+
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+
+.nav-bar button {
+	margin-top: 7.5px;
+}
+
+.channel-list button {
+	margin-right: 5px;
+}
+
+.form-control {
+	margin-top: 10px !important;
+}
+
+.close-channel {
+	margin-top: 2px;
+	float: right;
+}
+
+a:link, a:visited, 
+a:active, a:hover {
+	text-decoration: none;
+}
+
+#clear-btn {
+	margin-top: 5px;
+	float: right;
+}
