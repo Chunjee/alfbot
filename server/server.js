@@ -22,9 +22,6 @@ if (Meteor.isServer) {
   //End of startup?
 
 
-
-
-
   
   //Adds a new IRC client if the user is logged in  
   function ircAdd() {
@@ -79,12 +76,25 @@ if (Meteor.isServer) {
       client.addListener('message', Meteor.bindEnvironment(function (from, to, message) {
         logMessage('> ' + from, message);
 
-        //Check if message is a command
-        var REG = new RegExp("")
+        //~~~~~~~~~~~~~~~~~~~~~
+        //Commands
+        //~~~~~~~~~~~~~~~~~~~~~
+        if (/[^!]/.test(message)) {
+          var command = /^!(\w+)/.exec(message);
+          var userinput = /^!\w+\s+(.+)/.exec(message);
+          var params = {
+            command: command[1],
+            rawmessage: message,
+            message: userinput[1],
+            from: from,
+            to: to
+          };
+          console.log('command found: ', command[1]);
 
-
-        if () {
-          console.log('e found: ', message);
+          //Each command follows:
+          if (command[1] == 'test') {
+            Meteor.call('Fn_Addquote', params);
+          }
         }
       }));
 
