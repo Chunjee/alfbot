@@ -24,6 +24,7 @@ Meteor.methods({
 			if(l_username && l_message)
 			QuotesDB.insert({
 		      rawmessage: para_params.message,
+		      channel: para_params.channel,
 		      message: l_message,
 		      username: l_username,
 		      addedby: para_params.from,

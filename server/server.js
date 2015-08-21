@@ -84,6 +84,7 @@ if (Meteor.isServer) {
           var userinput = /^!\w+\s+(.+)/.exec(message);
           var params = {
             command: command[1],
+            channel: currentChannel,
             rawmessage: message,
             message: userinput[1],
             from: from,
