@@ -10,6 +10,12 @@ if (Meteor.isClient) {
   Nicks = new Mongo.Collection("nicks");
   Channels = new Mongo.Collection("channels");
 
+
+  //give all quotes to client
+  Template.quotes.helpers({quoteslist: }); //read from disk
+
+
+
   //These helpers allow meteor objects to display on the GUI
   Template.irc.helpers({
 
@@ -207,4 +213,6 @@ if (Meteor.isClient) {
       Router.go('login');
     }
   });
+
+
 }

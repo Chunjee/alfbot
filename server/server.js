@@ -12,11 +12,11 @@ if (Meteor.isServer) {
 
   //var irc = Meteor.require('irc');
   var irc = Meteor.npmRequire("irc");
-
+  var fs = Npm.require('fs');
 
   var isConnected = true;
 
-  var currentNick = 'alfbot', currentServer = 'irc.synirc.net', currentChannel = '#testchannel';
+  var currentNick = 'alfbot-2', currentServer = 'irc.synirc.net', currentChannel = '#testchannel';
   var client = ircAdd();
 
   //End of startup?
@@ -55,7 +55,7 @@ if (Meteor.isServer) {
 
       console.log('Connecting to ' + currentChannel);
       logMessage('Server', 'Connecting to ' + currentChannel);
-      
+
 
       //~~~~~~~~~~~~~~~~~~~~~
       //Compile Options
@@ -97,6 +97,10 @@ if (Meteor.isServer) {
             Meteor.call('Fn_Addquote', params);
           }
         }
+
+        //Always log all communications to file
+        var writestream = fs.createWriteStream("./people.html");
+        writestream.write(message);
       }));
 
       //Listerner adds pms to the collection
